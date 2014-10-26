@@ -1,0 +1,10 @@
+org.databene.contiperf
+org.databene.contiperf.clock
+org.databene.contiperf.junit
+org.databene.contiperf.log
+org.databene.contiperf.report
+org.databene.contiperf.sensor
+org.databene.contiperf.timer
+org.databene.contiperf.util
+org.databene.profile
+org.databene.stat

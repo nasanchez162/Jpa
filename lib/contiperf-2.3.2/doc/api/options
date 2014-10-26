@@ -1,0 +1,24 @@
+-classpath
+'/Users/volker/source/databene/contiperf/target/classes:/Users/volker/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar:/Users/volker/.m2/repository/junit/junit/4.10/junit-4.10.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/volker/source/databene/contiperf/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2013. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/volker/source/databene/contiperf/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'databene ContiPerf 2.3.2 API'
+-link
+'http://java.sun.com/j2se/1.5.0/docs/api'
+-use
+-version
+-windowtitle
+'databene ContiPerf 2.3.2 API'

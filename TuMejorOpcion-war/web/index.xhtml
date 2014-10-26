@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+    Document   : index
+    Created on : 14-sept-2014
+    Author     : Ana Maria Cardenas.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/main-template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ice="http://www.icesoft.com/icefaces/component"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:param name="titulo" value="Control de Acceso" />
+    <ui:define name="body">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'></link>
+        <style>
+            .parentGrid .icePnlGrdCol1 { vertical-align: top; border-color:transparent; } 
+        </style>
+        <style>
+            .childGrid .icePnlGrdCol1 { vertical-align: top; border-color:transparent;
+                                        background-color: #DB2713;
+                                        border-radius: 25px;
+                                        color: #EEF3FB;
+                                        width: 500px;
+                                        font-size: medium} 
+        </style> 
+        <style>
+            .childGrid2 .icePnlGrdCol1 { padding: 10%;} 
+        </style> 
+        
+        <ice:panelGrid columns="2" border="" styleClass="parentGrid"> 
+            <ice:panelGrid styleClass="childGrid2">
+                <ice:panelGrid styleClass="childGrid">
+                    <h3 style="font-family:'Pacifico', cursive; font-size: large"> Quienes Somos? </h3>
+                    <br></br>
+                Con Tu mejor opción ya no tienes que pensar y pensar qué regalos darles a tus amigos,
+                solo pide y Tu Mejor Opción te dirá cuáles son las mejores opciones de regalos para 
+                tus amigos basados en sus gustos en las redes sociales y adquirir bonos de regalo para
+                sus tiendas preferidas.
+                </ice:panelGrid>
+            </ice:panelGrid>
+            
+            <ice:panelGrid id="panelLogin">
+                <h3>Conéctate con nosotros por facebook:</h3>
+               <script type="text/javascript" src="resources/scripts/includeFacebookJDK.js"></script>
+               <ice:graphicImage value="resources/img/graphics/ajax-loader.gif" id="cargando"> 
+               </ice:graphicImage>
+                    <div id="botonFace" class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="checkLoginState();" scope="user_likes,user_friends,read_stream,email"></div>
+                    <div id="status">
+                    </div>
+
+                 <f:view id="tokenView">
+                     <h:form id="tokenForm" >
+                         <ice:inputText id="inputToken" value="NoHayId" binding="#{loginBean.usrToken}" visible="false"> 
+                         </ice:inputText>
+                         <ice:commandButton value="Lol" action="#{loginBean.hacerLogin()}" id="tokenButton" visible="false">
+                         </ice:commandButton>
+                     </h:form>
+                 </f:view>
+            </ice:panelGrid> 
+        </ice:panelGrid> 
+    </ui:define>
+</ui:composition>
